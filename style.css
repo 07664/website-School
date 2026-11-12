@@ -1,0 +1,987 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #222;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* =================================================
+   NAVBAR
+================================================= */
+
+.header {
+    width: 100%;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    min-height: 80px;
+
+    /* FLEXBOX */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #173b65;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    background: #173b65;
+    color: white;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.logo h2 {
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.logo span {
+    font-size: 10px;
+    color: #777;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #e39b26;
+}
+
+
+/* =================================================
+   HERO
+================================================= */
+
+.hero {
+    min-height: 650px;
+    background: linear-gradient(
+        135deg,
+        #eef5fb,
+        #ffffff
+    );
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-label {
+    color: #e39b26;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    color: #173b65;
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 15px 0 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e39b26;
+}
+
+.hero p {
+    max-width: 550px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #173b65;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #e39b26;
+}
+
+.btn-outline {
+    border-color: #173b65;
+    color: #173b65;
+}
+
+.btn-outline:hover {
+    background: #173b65;
+    color: white;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =================================================
+   SECTION
+================================================= */
+
+.section {
+    padding: 90px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title span {
+    color: #e39b26;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    color: #173b65;
+    font-size: 34px;
+    margin: 8px 0;
+}
+
+.section-title p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =================================================
+   PROFIL
+================================================= */
+
+.profil {
+    background: #ffffff;
+}
+
+.profil-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.profil-image,
+.profil-text {
+    flex: 1;
+}
+
+.profil-image img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.profil-text h3 {
+    color: #173b65;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.profil-text > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.info-sekolah {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-item {
+    padding: 15px;
+    border-left: 4px solid #e39b26;
+    background: #f7f9fb;
+}
+
+.info-item strong {
+    color: #173b65;
+}
+
+.info-item p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =================================================
+   VISI MISI
+================================================= */
+
+.visi-misi {
+    margin-top: 70px;
+
+    display: flex;
+    gap: 30px;
+}
+
+.visi,
+.misi {
+    flex: 1;
+    padding: 35px;
+    border-radius: 18px;
+    background: #f5f8fb;
+}
+
+.visi {
+    border-top: 5px solid #e39b26;
+}
+
+.misi {
+    border-top: 5px solid #173b65;
+}
+
+.vm-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.visi h3,
+.misi h3 {
+    color: #173b65;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.visi p,
+.misi li {
+    color: #666;
+    font-size: 14px;
+}
+
+.misi ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.misi li::before {
+    content: "✓";
+    color: #e39b26;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+/* =================================================
+   PROGRAM / JURUSAN
+================================================= */
+
+.program {
+    background: #f5f8fb;
+}
+
+.program-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.program-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+
+    flex: 1 1 calc(50% - 25px);
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.program-icon {
+    width: 60px;
+    height: 60px;
+    background: #eef5fb;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.program-card h3 {
+    color: #173b65;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.program-card p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.program-card a {
+    color: #e39b26;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =================================================
+   GURU
+================================================= */
+
+.guru-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.guru-card {
+    flex: 1 1 30%;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.guru-card:hover {
+    transform: translateY(-8px);
+}
+
+.guru-image img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.guru-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.guru-info span {
+    color: #e39b26;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.guru-info h3 {
+    color: #173b65;
+    font-size: 19px;
+    margin: 5px 0;
+}
+
+.guru-info p {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =================================================
+   GALERI
+================================================= */
+
+.galeri {
+    background: #f5f8fb;
+}
+
+.galeri-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.galeri-item {
+    position: relative;
+    flex: 1 1 calc(33.333% - 20px);
+    height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.galeri-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.galeri-item:hover img {
+    transform: scale(1.1);
+}
+
+.galeri-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 25px 15px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.75)
+    );
+
+    color: white;
+}
+
+.galeri-overlay h3 {
+    font-size: 16px;
+}
+
+
+/* =================================================
+   KONTAK
+================================================= */
+
+.kontak-container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.kontak-info,
+.contact-form {
+    flex: 1;
+}
+
+.kontak-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.kontak-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.kontak-icon {
+    min-width: 50px;
+    height: 50px;
+    background: #eef5fb;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+.kontak-item h3 {
+    color: #173b65;
+    font-size: 17px;
+}
+
+.kontak-item p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =================================================
+   FORM
+================================================= */
+
+.contact-form {
+    background: #f5f8fb;
+    padding: 35px;
+    border-radius: 20px;
+}
+
+.contact-form h3 {
+    color: #173b65;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #173b65;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* =================================================
+   FOOTER
+================================================= */
+
+.footer {
+    background: #122d4d;
+    color: white;
+    padding-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-brand {
+    flex: 1.5;
+}
+
+.footer-links,
+.footer-contact {
+    flex: 1;
+}
+
+.footer h2 {
+    margin-bottom: 15px;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+    color: #e39b26;
+}
+
+.footer p,
+.footer a {
+    color: #ccd5df;
+    font-size: 13px;
+}
+
+.footer-brand p {
+    max-width: 400px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a:hover {
+    color: #e39b26;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* =================================================
+   RESPONSIVE TABLET
+================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero-content,
+    .profil-content,
+    .kontak-container {
+        flex-direction: column;
+    }
+
+    .hero-text,
+    .hero-image,
+    .profil-image,
+    .profil-text,
+    .kontak-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .visi-misi {
+        flex-direction: column;
+    }
+
+    .guru-card {
+        flex: 1 1 calc(50% - 30px);
+    }
+
+    .galeri-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+    }
+}
+
+/* ================= HAMBURGER ================= */
+
+.hamburger {
+    display: none;
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 5px;
+    background: currentColor;
+    transition: 0.3s ease;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        background: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: 0.3s ease;
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Animasi hamburger menjadi X */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+/* =================================================
+   RESPONSIVE HP
+================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .logo h2 {
+        font-size: 15px;
+    }
+
+    .nav-menu {
+        gap: 12px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .profil-image img {
+        height: 280px;
+    }
+
+    .visi,
+    .misi {
+        padding: 25px;
+    }
+
+    .program-card {
+        flex: 1 1 100%;
+    }
+
+    .guru-card {
+        flex: 1 1 100%;
+    }
+
+    .guru-image img {
+        height: 330px;
+    }
+
+    .galeri-item {
+        flex: 1 1 100%;
+        height: 280px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+}
+
+/* ===============================
+   EFEK HOVER TAMBAHAN
+================================ */
+
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.program-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.guru-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.visi:hover,
+.misi:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.kontak-item {
+    transition: all 0.3s ease;
+}
+
+.kontak-item:hover {
+    transform: translateX(8px);
+}
+
+.galeri-item {
+    transition: all 0.3s ease;
+}
+
+.galeri-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.03);
+}
+
+.nav-menu a {
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    transform: translateY(-2px);
+}
